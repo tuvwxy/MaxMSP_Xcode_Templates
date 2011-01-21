@@ -1,0 +1,11 @@
+{
+	FilesToRename = {
+		"main.c" = "ÇPROJECTNAMEÈ.c";
+		"TemplateMspExternal.xcodeproj" = "ÇPROJECTNAMEÈ.xcodeproj";
+	};
+	FilesToMacroExpand = (
+		"ÇPROJECTNAMEÈ.c",
+		"ÇPROJECTNAMEÈ.xcodeproj/project.pbxproj"
+	);
+	Description = "This project builds a MSP external object in C.";
+}
