@@ -1,0 +1,15 @@
+{
+	FilesToRename = {
+		"main.cpp" = "«PROJECTNAME».cpp";
+		"main.h" = "«PROJECTNAME».h";
+		"TemplateMspExternal.xcodeproj" = "«PROJECTNAME».xcodeproj";
+	};
+	FilesToMacroExpand = (
+		"maxmspsdk-debug.xcconfig",
+		"maxmspsdk-release.xcconfig",
+		"«PROJECTNAME».cpp",
+		"«PROJECTNAME».h",
+		"«PROJECTNAME».xcodeproj/project.pbxproj"
+	);
+	Description = "This project builds a MSP external object in C++.";
+}
