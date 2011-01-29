@@ -3,19 +3,30 @@
  *  ÇPROJECTNAMEÈ
  *
  *  Created by ÇFULLUSERNAMEÈ on ÇDATEÈ.
- *  Copyright ÇYEARÈ ÇORGANIZATIONNAMEÈ. All rights reserved.
+ *  Copyright (C) ÇYEARÈ ÇORGANIZATIONNAMEÈ. All rights reserved.
  */
 
 #include "ext.h"
 #include "ext_obex.h"
 
+#pragma mark -
+#pragma mark Object Struct
 typedef struct _ÇPROJECTNAMEASIDENTIFIERÈ
 {
 	t_object m_obj;
 } t_ÇPROJECTNAMEASIDENTIFIERÈ;
 
+#pragma mark -
+#pragma mark Function Prototypes
+void* ÇPROJECTNAMEASIDENTIFIERÈ_new(t_symbol* s, long argc, t_atom* argv);
+void ÇPROJECTNAMEASIDENTIFIERÈ_free(t_ÇPROJECTNAMEASIDENTIFIERÈ* x);
+void ÇPROJECTNAMEASIDENTIFIERÈ_assist(t_ÇPROJECTNAMEASIDENTIFIERÈ* x, void* b, long m, long a, char* s);
+
+// Global class pointer
 static t_class* s_ÇPROJECTNAMEASIDENTIFIERÈ_class = NULL;
 
+#pragma mark -
+#pragma mark Alloc & Free
 void* ÇPROJECTNAMEASIDENTIFIERÈ_new(t_symbol* s, long argc, t_atom* argv)
 {
 	t_dictionary* d = object_dictionaryarg(argc, argv);
@@ -45,6 +56,8 @@ void ÇPROJECTNAMEASIDENTIFIERÈ_free(t_ÇPROJECTNAMEASIDENTIFIERÈ* x)
 	/* Do any deallocation needed here. */
 }
 
+#pragma mark -
+#pragma mark Max Helpers
 void ÇPROJECTNAMEASIDENTIFIERÈ_assist(t_ÇPROJECTNAMEASIDENTIFIERÈ* x, void* b, long m, long a, char* s)
 {
 	if (m == ASSIST_INLET) {
@@ -63,12 +76,17 @@ void ÇPROJECTNAMEASIDENTIFIERÈ_assist(t_ÇPROJECTNAMEASIDENTIFIERÈ* x, void* b, l
 	}
 }
 
+#pragma mark -
+#pragma mark Main
 int main(void)
 {
 	t_class* c;
 	
-	c = class_new("ÇPROJECTNAMEÈ", (method)ÇPROJECTNAMEASIDENTIFIERÈ_new, (method)ÇPROJECTNAMEASIDENTIFIERÈ_free, 
-			sizeof(t_ÇPROJECTNAMEASIDENTIFIERÈ), (method)0L, A_GIMME, 0);
+	c = class_new("ÇPROJECTNAMEÈ", 
+                  (method)ÇPROJECTNAMEASIDENTIFIERÈ_new, 
+                  (method)ÇPROJECTNAMEASIDENTIFIERÈ_free, 
+                  sizeof(t_ÇPROJECTNAMEASIDENTIFIERÈ), 
+                  (method)0L, A_GIMME, 0);
 	
 	c->c_flags |= CLASS_FLAG_NEWDICTIONARY;
 	

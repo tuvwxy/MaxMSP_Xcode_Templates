@@ -1,11 +1,13 @@
 {
 	FilesToRename = {
-		"main.c" = "ÇPROJECTNAMEÈ.c";
-		"TemplateMspExternal.xcodeproj" = "ÇPROJECTNAMEÈ.xcodeproj";
+		"main.c" = "Â«PROJECTNAMEÂ».c";
+		"TemplateMspExternal.xcodeproj" = "Â«PROJECTNAMEÂ».xcodeproj";
 	};
 	FilesToMacroExpand = (
-		"ÇPROJECTNAMEÈ.c",
-		"ÇPROJECTNAMEÈ.xcodeproj/project.pbxproj"
+		"maxmspsdk-debug.xcconfig",
+		"maxmspsdk-release.xcconfig",
+		"Â«PROJECTNAMEÂ».c",
+		"Â«PROJECTNAMEÂ».xcodeproj/project.pbxproj"
 	);
 	Description = "This project builds a MSP external object in C.";
 }

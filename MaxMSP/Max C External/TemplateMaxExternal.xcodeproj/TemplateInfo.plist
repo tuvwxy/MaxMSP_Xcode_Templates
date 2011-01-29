@@ -1,11 +1,13 @@
 {
 	FilesToRename = {
-		"main.c" = "ÇPROJECTNAMEÈ.c";
-		"TemplateMaxExternal.xcodeproj" = "ÇPROJECTNAMEÈ.xcodeproj";
+		"main.c" = "Â«PROJECTNAMEÂ».c";
+		"TemplateMaxExternal.xcodeproj" = "Â«PROJECTNAMEÂ».xcodeproj";
 	};
 	FilesToMacroExpand = (
-		"ÇPROJECTNAMEÈ.c",
-		"ÇPROJECTNAMEÈ.xcodeproj/project.pbxproj"
+		"maxmspsdk-debug.xcconfig",
+		"maxmspsdk-release.xcconfig",
+		"Â«PROJECTNAMEÂ».c",
+		"Â«PROJECTNAMEÂ».xcodeproj/project.pbxproj"
 	);
 	Description = "This project builds a Max external object in C.";
 }

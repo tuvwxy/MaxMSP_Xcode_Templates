@@ -9,17 +9,15 @@
 // Copyright © 2008, Cycling '74
 // 
 // by Toshiro Yamada
-// Copyright © 2010, University of California, San Diego
+// Copyright © 2010, Toshiro Yamada
 
 
 // Name & Version & Copyright
 PRODUCT_NAME = $(TARGET_NAME)
-CURRENT_PRODUCT_VERSION = 
-COPYRIGHT = Copyright © 2010, University of California, San Diego
-
+CURRENT_PRODUCT_VERSION = 1.0
+COPYRIGHT = "Copyright (C) «YEAR» «ORGANIZATIONNAME»"
 
 // Paths
-FRAMEWORK_SEARCH_PATHS = /Developer/Headers/FlatCarbon /Library/Frameworks/MaxAPI.framework /Library/Frameworks/MaxAudioAPI.framework 
 HEADER_SEARCH_PATHS = /Library/Frameworks/MaxAPI.framework/Headers /Library/Frameworks/MaxAudioAPI.framework/Headers 
 DSTROOT = $(PROJECT_DIR) //$(SRCROOT)
 // (This next path is relative to DSTROOT)
